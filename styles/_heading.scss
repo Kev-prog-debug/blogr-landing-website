@@ -1,0 +1,151 @@
+header {
+  background-image: linear-gradient(45deg, $VeryLightRed, $LightRed);
+  z-index: 10;
+  border-radius: 0 0 0 40px;
+  nav {
+    width: 85%;
+    padding: 20px 15px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    #dropdown {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      .home {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+// dropdown menu
+.product,
+.company,
+.connect {
+  position: relative;
+  .dropdown-item {
+    position: absolute;
+    background-color: $white;
+    color: $LightRed;
+    border-radius: 10px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 10px;
+    margin: 0 20px;
+    justify-content: space-between;
+    opacity: 0;
+    pointer-events: none;
+    list-style-type: none;
+    padding: 0;
+    li {
+      width: 100%;
+      height: 100%;
+      padding: 20px 0;
+      transition: all 0.25s linear;
+      a {
+        height: 100%;
+        width: 100%;
+        color: $LightRed !important;
+        padding: 20px;
+      }
+      &:hover {
+        border-radius: 10px;
+        background-color: $VeryLightRed;
+        a {
+          height: 100%;
+          padding: 20px;
+          color: white !important;
+        }
+      }
+    }
+  }
+  button {
+    color: $white;
+    border: none;
+    margin: 15px 0 15px 1.5rem;
+    margin-left: 1.5rem;
+    background: transparent;
+    &:focus + .dropdown-item {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+// registration
+.registration {
+  button {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+  }
+  .login {
+    background: transparent;
+    color: $white;
+    &:hover {
+      color: $VeryDarkBlue;
+    }
+  }
+  .sign_up {
+    color: $LightRed;
+    &:hover {
+      color: $VeryDarkBlue;
+    }
+  }
+}
+
+// welcome text
+.introSection {
+  color: $white;
+  text-align: center;
+  padding: 30px 0;
+  height: 150px;
+  h1 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 5px;
+  }
+  p {
+    font-size: 16px;
+  }
+  button {
+    padding: 8px 8px;
+    border-radius: 30px;
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .start {
+    color: $LightRed;
+    background-color: white;
+  }
+  .learnMore {
+    color: $white;
+    background-color: transparent;
+    border: 1px solid white;
+  }
+}
+@media screen and (min-width: 1440px) {
+  header {
+    nav {
+      width: 70%;
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  header {
+    nav {
+      a {
+        color: blue;
+      }
+    }
+  }
+}

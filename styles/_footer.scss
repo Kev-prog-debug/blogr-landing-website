@@ -1,0 +1,49 @@
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: $footerBg;
+  color: $footer;
+  padding: 20px 0;
+  border-radius: 0 3rem 0 0;
+  a {
+    text-decoration: none;
+    color: $footer;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+}
+.product-footer,
+.company-footer,
+.connect-footer {
+  text-align: start;
+  h3 {
+    font-size: 15px;
+  }
+  ul {
+    text-align: start;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+      font-size: 10px;
+      font-weight: 100;
+      margin: 5px 0;
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .product-footer,
+  .company-footer,
+  .connect-footer {
+    h3 {
+      font-size: 20px;
+    }
+    ul {
+      li {
+        font-size: 16px;
+        font-weight: 200;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+//primary
+$LightRed: hsl(356, 100%, 66%);
+$VeryLightRed: (355, 100%, 74%);
+$VeryDarkBlue: hsl(208, 49%, 24%);
+
+//neutral
+$white: hsl(0, 0%, 100%);
+$footer: hsl(240, 2%, 79%);
+$body: hsl(207, 13%, 34%);
+$footerBg: hsl(240, 10%, 16%);
+
+//Background gradient - Intro/CTA mobile nav:
+$VeryLightRed: hsl(13, 100%, 72%);
+$LightRed: hsl(353, 100%, 62%);
+//Background gradient - body:
+$VeryDarkGrayBlue: hsl(237, 17%, 21%);
+$VeryDarkDesaturatedBlue: hsl(237, 23%, 32%);
+
+//font
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+
+//font-family: 'Overpass', sans-serif;
+//font-family: 'Ubuntu', sans-serif;
+
+@import "./heading";
+@import "./footer";
+@import "./showcase";
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
