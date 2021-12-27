@@ -1,91 +1,70 @@
 header {
+  width: 100%;
   background-image: linear-gradient(45deg, $VeryLightRed, $LightRed);
   z-index: 10;
   border-radius: 0 0 0 40px;
   nav {
-    width: 85%;
     padding: 20px 15px;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    #dropdown {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      a {
-        text-decoration: none;
-        color: white;
-      }
-      .home {
-        font-size: 1.5em;
-      }
+    font-family: $textFont;
+  }
+}
+//dropdown
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: auto;
+  margin-left: 30px;
+}
+.dropdown-items {
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px 20px;
+  padding: 0;
+  width: 120px;
+  height: auto;
+  position: absolute;
+  display: none;
+  margin: auto;
+  top: 1.8rem;
+  background-color: $VeryLightRed;
+  li {
+    list-style-type: none;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    border-radius: 10px;
+    &:hover {
+      background-color: hsla(13, 100%, 72%, 0.5);
     }
   }
 }
-
-// dropdown menu
-.product,
-.company,
-.connect {
+.nav-link {
+  margin: 0 15px;
   position: relative;
-  .dropdown-item {
-    position: absolute;
-    background-color: $white;
-    color: $LightRed;
-    border-radius: 10px;
-    width: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 10px;
-    margin: 0 20px;
-    justify-content: space-between;
-    opacity: 0;
-    pointer-events: none;
-    list-style-type: none;
-    padding: 0;
-    li {
-      width: 100%;
-      height: 100%;
-      padding: 20px 0;
-      transition: all 0.25s linear;
-      a {
-        height: 100%;
-        width: 100%;
-        color: $LightRed !important;
-        padding: 20px;
-      }
-      &:hover {
-        border-radius: 10px;
-        background-color: $VeryLightRed;
-        a {
-          height: 100%;
-          padding: 20px;
-          color: white !important;
-        }
-      }
-    }
-  }
-  button {
+  a {
     color: $white;
-    border: none;
-    margin: 15px 0 15px 1.5rem;
-    margin-left: 1.5rem;
-    background: transparent;
-    &:focus + .dropdown-item {
-      opacity: 1;
-      pointer-events: all;
+    text-decoration: none;
+    i {
+      margin-left: 8px;
+    }
+    &:focus + .dropdown-items {
+      display: block;
     }
   }
 }
 
 // registration
 .registration {
-  button {
-    border: none;
-    padding: 8px 15px;
+  a {
+    padding: 10px 20px;
+    background-color: $white;
     border-radius: 20px;
+    text-decoration: none;
   }
   .login {
     background: transparent;
@@ -103,29 +82,32 @@ header {
 }
 
 // welcome text
-.introSection {
+.intro {
   color: $white;
   text-align: center;
-  padding: 30px 0;
   height: 150px;
   h1 {
-    font-size: 30px;
-    font-weight: 500;
+    font-family: $titleFont;
+    font-size: 35px;
+    font-weight: 700;
     margin: 5px;
   }
   p {
     font-size: 16px;
+    font-family: $textFont;
   }
-  button {
+  a {
     padding: 8px 8px;
     border-radius: 30px;
+    background-color: $white;
     border: none;
     font-size: 13px;
     font-weight: 500;
+    text-decoration: none;
+    font-family: $textFont;
   }
   .start {
     color: $LightRed;
-    background-color: white;
   }
   .learnMore {
     color: $white;
@@ -133,19 +115,6 @@ header {
     border: 1px solid white;
   }
 }
-@media screen and (min-width: 1440px) {
-  header {
-    nav {
-      width: 70%;
-    }
-  }
-}
-@media screen and (max-width: 375px) {
-  header {
-    nav {
-      a {
-        color: blue;
-      }
-    }
-  }
+.hamburger {
+  display: none;
 }

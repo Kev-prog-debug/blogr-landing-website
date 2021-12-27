@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
 header {
+  width: 100%;
   background-image: linear-gradient(45deg, #ff8f70, #ff3d54);
   z-index: 10;
   border-radius: 0 0 0 40px;
 }
 
 header nav {
-  width: 85%;
   padding: 20px 15px;
   margin: auto;
   display: -webkit-box;
@@ -18,119 +18,72 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "Overpass", sans-serif;
 }
 
-header nav #dropdown {
+.dropdown {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-header nav #dropdown a {
-  text-decoration: none;
-  color: white;
-}
-
-header nav #dropdown .home {
-  font-size: 1.5em;
-}
-
-.product,
-.company,
-.connect {
-  position: relative;
-}
-
-.product .dropdown-item,
-.company .dropdown-item,
-.connect .dropdown-item {
-  position: absolute;
-  background-color: white;
-  color: #ff3d54;
-  border-radius: 10px;
-  width: 120px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 15px 10px;
-  margin: 0 20px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  opacity: 0;
-  pointer-events: none;
-  list-style-type: none;
-  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: auto;
+  margin-left: 30px;
 }
 
-.product .dropdown-item li,
-.company .dropdown-item li,
-.connect .dropdown-item li {
-  width: 100%;
-  height: 100%;
-  padding: 20px 0;
-  -webkit-transition: all 0.25s linear;
-  transition: all 0.25s linear;
-}
-
-.product .dropdown-item li a,
-.company .dropdown-item li a,
-.connect .dropdown-item li a {
-  height: 100%;
-  width: 100%;
-  color: #ff3d54 !important;
-  padding: 20px;
-}
-
-.product .dropdown-item li:hover,
-.company .dropdown-item li:hover,
-.connect .dropdown-item li:hover {
+.dropdown-items {
   border-radius: 10px;
+  text-align: center;
+  margin: 10px 20px;
+  padding: 0;
+  width: 120px;
+  height: auto;
+  position: absolute;
+  display: none;
+  margin: auto;
+  top: 1.8rem;
   background-color: #ff8f70;
 }
 
-.product .dropdown-item li:hover a,
-.company .dropdown-item li:hover a,
-.connect .dropdown-item li:hover a {
-  height: 100%;
-  padding: 20px;
-  color: white !important;
+.dropdown-items li {
+  list-style-type: none;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  border-radius: 10px;
 }
 
-.product button,
-.company button,
-.connect button {
+.dropdown-items li:hover {
+  background-color: rgba(255, 143, 112, 0.5);
+}
+
+.nav-link {
+  margin: 0 15px;
+  position: relative;
+}
+
+.nav-link a {
   color: white;
-  border: none;
-  margin: 15px 0 15px 1.5rem;
-  margin-left: 1.5rem;
-  background: transparent;
+  text-decoration: none;
 }
 
-.product button:focus + .dropdown-item,
-.company button:focus + .dropdown-item,
-.connect button:focus + .dropdown-item {
-  opacity: 1;
-  pointer-events: all;
+.nav-link a i {
+  margin-left: 8px;
 }
 
-.registration button {
-  border: none;
-  padding: 8px 15px;
+.nav-link a:focus + .dropdown-items {
+  display: block;
+}
+
+.registration a {
+  padding: 10px 20px;
+  background-color: white;
   border-radius: 20px;
+  text-decoration: none;
 }
 
 .registration .login {
@@ -150,52 +103,47 @@ header nav #dropdown .home {
   color: #1f3f5b;
 }
 
-.introSection {
+.intro {
   color: white;
   text-align: center;
-  padding: 30px 0;
   height: 150px;
 }
 
-.introSection h1 {
-  font-size: 30px;
-  font-weight: 500;
+.intro h1 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
   margin: 5px;
 }
 
-.introSection p {
+.intro p {
   font-size: 16px;
+  font-family: "Overpass", sans-serif;
 }
 
-.introSection button {
+.intro a {
   padding: 8px 8px;
   border-radius: 30px;
+  background-color: white;
   border: none;
   font-size: 13px;
   font-weight: 500;
+  text-decoration: none;
+  font-family: "Overpass", sans-serif;
 }
 
-.introSection .start {
+.intro .start {
   color: #ff3d54;
-  background-color: white;
 }
 
-.introSection .learnMore {
+.intro .learnMore {
   color: white;
   background-color: transparent;
   border: 1px solid white;
 }
 
-@media screen and (min-width: 1440px) {
-  header nav {
-    width: 70%;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  header nav a {
-    color: blue;
-  }
+.hamburger {
+  display: none;
 }
 
 footer {
@@ -441,6 +389,89 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Overpass", sans-serif;
+}
+
+.container {
+  width: 100%;
+}
+
+@media screen and (max-width: 375px) {
+  .hamburger {
+    display: block;
+  }
+  nav {
+    height: 20vh;
+  }
+  header {
+    position: relative;
+  }
+  .dropdown-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    padding: 20px 10px;
+    width: 80%;
+    top: 10vh;
+    margin: auto;
+    background-color: #ff3d54;
+    border-radius: 10px;
+    -webkit-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+  }
+  .registration {
+    margin: 35px 0;
+  }
+  .dropdown {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 20px 0;
+    height: auto;
+    width: 100%;
+  }
+  .dropdown a {
+    margin: 20px 0;
+  }
+  .nav-link {
+    position: relative;
+  }
+  .dropdown-items {
+    position: relative;
+    width: 100%;
+  }
+  .dropdown-items li {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .toggleDropdown {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .intro {
+    height: 300px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
