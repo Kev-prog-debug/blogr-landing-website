@@ -17,6 +17,14 @@ header {
     color: $white;
   }
 }
+.dropdown {
+  a {
+    color: black;
+    &:focus {
+      color: $LightRed;
+    }
+  }
+}
 #user-auth {
   margin-left: auto;
   display: flex;

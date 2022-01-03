@@ -22,6 +22,14 @@ header nav a {
   color: white;
 }
 
+.dropdown a {
+  color: black;
+}
+
+.dropdown a:focus {
+  color: #ff3d54;
+}
+
 #user-auth {
   margin-left: auto;
   display: -webkit-box;
@@ -306,6 +314,14 @@ body {
   nav {
     height: 10vh;
     width: 100%;
+  }
+  .navbar-nav {
+    background-color: white;
+    padding: 20px 10px;
+    border-radius: 10px;
+  }
+  #login a {
+    color: black;
   }
   header {
     position: relative;

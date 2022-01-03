@@ -136,6 +136,16 @@ body {
     height: 10vh;
     width: 100%;
   }
+  .navbar-nav {
+    background-color: $white;
+    padding: 20px 10px;
+    border-radius: 10px;
+  }
+  #login {
+    a {
+      color: black;
+    }
+  }
   header {
     position: relative;
   }
