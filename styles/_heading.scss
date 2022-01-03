@@ -1,0 +1,88 @@
+header {
+  width: 100%;
+  background-image: linear-gradient(45deg, $VeryLightRed, $LightRed);
+  z-index: 10;
+  border-radius: 0 0 0 40px;
+  height: auto;
+  nav {
+    a {
+      color: $white;
+    }
+  }
+}
+.navbar-nav {
+  width: 100%;
+  align-items: center;
+  a {
+    color: $white;
+  }
+}
+.dropdown {
+  a {
+    color: black;
+    &:focus {
+      color: $LightRed;
+    }
+  }
+}
+#user-auth {
+  margin-left: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#login,
+#signup {
+  padding: 0px 5px;
+  margin: 0 20px;
+  border-radius: 20px;
+  a {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+#signup {
+  background-color: $white;
+  a {
+    color: $LightRed;
+  }
+}
+#login {
+  margin-left: auto;
+  background-color: transparent;
+}
+// welcome text
+.intro {
+  padding: 5rem 0;
+  color: $white;
+  text-align: center;
+  height: auto;
+  h1 {
+    font-family: $titleFont;
+    font-size: 35px;
+    font-weight: 700;
+    margin: 5px;
+  }
+  p {
+    font-size: 16px;
+    font-family: $textFont;
+  }
+  a {
+    padding: 8px 8px;
+    border-radius: 30px;
+    background-color: $white;
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: $textFont;
+  }
+  .start {
+    color: $LightRed;
+  }
+  .learnMore {
+    color: $white;
+    background-color: transparent;
+    border: 1px solid white;
+  }
+}
