@@ -140,6 +140,9 @@ body {
     background-color: $white;
     padding: 20px 10px;
     border-radius: 10px;
+    a {
+      color: black;
+    }
   }
   #login {
     a {
@@ -158,14 +161,16 @@ body {
     padding: 0;
   }
   #first-showcase {
-    padding: 20px;
     display: flex;
     flex-direction: column;
-
-    padding: 0 20px;
+    justify-content: space-around;
+    align-items: center;
     .title {
       order: 1;
       font-weight: 400;
+    }
+    article {
+      margin-left: -300px;
     }
     .article1 {
       order: 3;
